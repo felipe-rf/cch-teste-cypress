@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "cypress:run": "cypress run",
+    "cypress:report": "npm run cypress:run && npx mochawesome-merge cypress/reports/*.json > cypress/reports/report.json && npx marge cypress/reports/report.json -f final-report -o cypress/reports",
+    "test": "npm run cypress:report"
+  },
+  "devDependencies": {
+    "cypress": "^15.7.1",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.1.0",
+    "mochawesome-report-generator": "^6.3.2"
+  },
+  "dependencies": {
+    "react": "^19.2.1"
+  }
+}
