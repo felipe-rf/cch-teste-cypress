@@ -10,7 +10,7 @@ export default defineConfig({
     reporterOptions: {
       reportDir: "cypress/reports",
       overwrite: false,
-      html: false, // We'll generate a merged HTML later
+      html: true, // We'll generate a merged HTML later
       json: true,
     },
   },

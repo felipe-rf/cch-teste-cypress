@@ -6,15 +6,11 @@ describe("Character Form – Validation", () => {
   });
 
   it("should block submit when required fields are empty", () => {
-    // Try submitting without filling anything
     cy.get('[data-testid="btn-submit"]').click();
-
-    // Native browser validation should prevent submission
     cy.get('[data-testid="character-form"]').then(($form) => {
       expect($form[0].checkValidity()).to.eq(false);
     });
 
-    // Dialog should still be open
     cy.get('[data-testid="character-form"]').should("be.visible");
   });
 
